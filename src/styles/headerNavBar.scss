@@ -1,0 +1,39 @@
+.headerNavBar {
+  &-navBarItems {
+  }
+
+  &-navBarItem {
+  }
+
+  &-hamburgerButton {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.4s ease-in-out;
+
+    &_isOpen {
+      color: white;
+
+      .headerNavBar-hamburgerButtonLine_isLine1 {
+        transform: rotate(-45deg) translate(-2px, 8px);
+      }
+      .headerNavBar-hamburgerButtonLine_isLine2 {
+        opacity: 0;
+      }
+      .headerNavBar-hamburgerButtonLine_isLine3 {
+        transform: rotate(45deg) translate(0px, -6px);
+      }
+    }
+
+    &Line {
+      width: 30px;
+      background-color: black;
+      height: 2px;
+      margin-bottom: 4px;
+      transition: 0.6s;
+    }
+  }
+}
