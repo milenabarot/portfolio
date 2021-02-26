@@ -1,8 +1,15 @@
 .headerNavBar {
+  position: fixed;
+  right: 0;
+  display: flex;
+
   &-navBarItems {
+    display: flex;
+    list-style: none;
   }
 
   &-navBarItem {
+    margin-left: 10px;
   }
 
   &-hamburgerButton {
@@ -11,12 +18,9 @@
     outline: none;
     cursor: pointer;
     padding: 20px;
-    border-radius: 10px;
     transition: 0.4s ease-in-out;
 
     &_isOpen {
-      color: white;
-
       .headerNavBar-hamburgerButtonLine_isLine1 {
         transform: rotate(-45deg) translate(-2px, 8px);
       }

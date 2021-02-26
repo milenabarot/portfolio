@@ -1,12 +1,11 @@
 .header {
-  display: flex;
-  justify-content: center;
 }
 
 .header {
   &-progressBar {
     position: fixed;
-    background-color: black;
+    background-color: grey;
     height: 7px;
+    top: 0;
   }
 }
