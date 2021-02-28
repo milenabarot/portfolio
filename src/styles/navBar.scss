@@ -1,14 +1,29 @@
-.headerNavBar {
+.navBar {
   position: fixed;
-  right: 0;
   display: flex;
+  width: 100%;
 
-  &-navBarItems {
+  &-title {
+  }
+  &-progressBar {
+    position: fixed;
+    background-color: grey;
+    height: 7px;
+    top: 0;
+  }
+
+  &-wrapListAndButton {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+  }
+
+  &-menuItems {
     display: flex;
     list-style: none;
   }
 
-  &-navBarItem {
+  &-menuItem {
     margin-left: 10px;
   }
 
@@ -21,13 +36,13 @@
     transition: 0.4s ease-in-out;
 
     &_isOpen {
-      .headerNavBar-hamburgerButtonLine_isLine1 {
+      .navBar-hamburgerButtonLine_isLine1 {
         transform: rotate(-45deg) translate(-2px, 8px);
       }
-      .headerNavBar-hamburgerButtonLine_isLine2 {
+      .navBar-hamburgerButtonLine_isLine2 {
         opacity: 0;
       }
-      .headerNavBar-hamburgerButtonLine_isLine3 {
+      .navBar-hamburgerButtonLine_isLine3 {
         transform: rotate(45deg) translate(0px, -6px);
       }
     }
