@@ -27,8 +27,6 @@ function NavBar() {
     } else {
       setIsNavBarTitleVisible(false);
     }
-
-    console.log(scrollTop, totalDistanceFromTop);
   };
 
   //progress bar
@@ -68,7 +66,19 @@ function NavBar() {
         className="navBar-progressBar"
       ></div>
       <nav className="navBar">
-        {isNavBarTitleVisible && <h1 className="navBar-title">Milena Barot</h1>}
+        {isNavBarTitleVisible && (
+          <AnimatePresence>
+            <motion.h1
+              initial={{ opacity: 0, x: -250 }}
+              animate={{ opacity: 1, x: 150 }}
+              exit={{ opacity: 0, x: 300 }}
+              transition={{ duration: 0.8 }}
+              className="navBar-title"
+            >
+              Milena Barot
+            </motion.h1>
+          </AnimatePresence>
+        )}
         <div className="navBar-wrapListAndButton">
           <AnimatePresence>
             {isNavBarOpen ? (

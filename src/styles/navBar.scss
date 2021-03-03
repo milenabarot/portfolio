@@ -4,11 +4,12 @@
   width: 100%;
 
   &-title {
+    margin: 20px;
   }
   &-progressBar {
     position: fixed;
     background-color: grey;
-    height: 7px;
+    height: 5px;
     top: 0;
   }
 
@@ -37,20 +38,20 @@
 
     &_isOpen {
       .navBar-hamburgerButtonLine_isLine1 {
-        transform: rotate(-45deg) translate(-2px, 8px);
+        transform: rotate(-45deg) translate(-5px, 9px);
       }
       .navBar-hamburgerButtonLine_isLine2 {
         opacity: 0;
       }
       .navBar-hamburgerButtonLine_isLine3 {
-        transform: rotate(45deg) translate(0px, -6px);
+        transform: rotate(45deg) translate(0px, -5px);
       }
     }
 
     &Line {
       width: 30px;
       background-color: black;
-      height: 2px;
+      height: 3px;
       margin-bottom: 4px;
       transition: 0.6s;
     }
