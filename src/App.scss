@@ -1,5 +1,9 @@
+@import "./styles/variables.scss";
+
 .app {
   background-color: white;
+  font-family: $main-font-family;
+  font-weight: 300;
 }
 
 // * {

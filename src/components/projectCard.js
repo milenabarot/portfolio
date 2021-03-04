@@ -1,10 +1,12 @@
 import "../styles/projectCard.scss";
 import ProjectCardInfo from "../components/projectCardInfo";
+import { motion } from "framer-motion";
 import classNames from "classnames";
 
 function ProjectCard(props) {
   return (
-    <div
+    <motion.div
+      whileHover={{ scale: 1.08 }}
       className={classNames("projectCard", {
         projectCard_isSelected: props.project.selected,
       })}
@@ -17,9 +19,12 @@ function ProjectCard(props) {
       />
       <p className="projectCard-title">{props.project.title}</p>
       {props.project.selected && (
-        <ProjectCardInfo moreInfo={props.project.moreInfo} />
+        <ProjectCardInfo
+          moreInfo={props.project.moreInfo}
+          link={props.project.link}
+        />
       )}
-    </div>
+    </motion.div>
   );
 }
 
