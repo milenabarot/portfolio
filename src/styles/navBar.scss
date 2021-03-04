@@ -1,0 +1,59 @@
+.navBar {
+  position: fixed;
+  display: flex;
+  width: 100%;
+
+  &-title {
+    margin: 20px;
+  }
+  &-progressBar {
+    position: fixed;
+    background-color: grey;
+    height: 5px;
+    top: 0;
+  }
+
+  &-wrapListAndButton {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+  }
+
+  &-menuItems {
+    display: flex;
+    list-style: none;
+  }
+
+  &-menuItem {
+    margin-left: 10px;
+  }
+
+  &-hamburgerButton {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 20px;
+    transition: 0.4s ease-in-out;
+
+    &_isOpen {
+      .navBar-hamburgerButtonLine_isLine1 {
+        transform: rotate(-45deg) translate(-5px, 9px);
+      }
+      .navBar-hamburgerButtonLine_isLine2 {
+        opacity: 0;
+      }
+      .navBar-hamburgerButtonLine_isLine3 {
+        transform: rotate(45deg) translate(0px, -5px);
+      }
+    }
+
+    &Line {
+      width: 30px;
+      background-color: black;
+      height: 3px;
+      margin-bottom: 4px;
+      transition: 0.6s;
+    }
+  }
+}

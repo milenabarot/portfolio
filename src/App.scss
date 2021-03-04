@@ -1,7 +1,23 @@
+@import "./styles/variables.scss";
+
 .app {
   background-color: white;
+  font-family: $main-font-family;
+  font-weight: 300;
 }
 
 // * {
 //   margin-bottom: 300px;
 // }
+
+.header,
+#projects,
+#about,
+#contact,
+.footer {
+  margin-bottom: 300px;
+}
+
+a {
+  text-decoration: none;
+}

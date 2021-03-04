@@ -1,53 +1,27 @@
 import { useEffect, useState } from "react";
-import HeaderNavBar from "./headerNavBar";
+import { motion, AnimatePresence } from "framer-motion";
+
 import "../styles/header.scss";
 
 function Header() {
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  useEffect(() => {
-    window.addEventListener("scroll", (event) => {
-      calculateScrollDistance();
-    });
-  }, []);
-
-  //progress bar
-  const calculateScrollDistance = () => {
-    const scrollTop = window.pageYOffset;
-    const winHeight = window.innerHeight;
-    const docHeight = getDocHeight();
-
-    const totalDocScrollLength = docHeight - winHeight;
-    const newScrollPosition = Math.floor(
-      (scrollTop / totalDocScrollLength) * 100
-    );
-
-    setScrollPosition(newScrollPosition);
-  };
-
-  const getDocHeight = () => {
-    return Math.max(
-      document.body.scrollHeight,
-      document.documentElement.scrollHeight,
-      document.body.offsetHeight,
-      document.documentElement.offsetHeight,
-      document.body.clientHeight,
-      document.documentElement.clientHeight
-    );
-  };
-
   return (
     <div className="header">
-      <div
-        style={{ width: `${scrollPosition}%` }}
-        className="header-progressBar"
-      ></div>
-      <HeaderNavBar />
-      <h1>Milena Barot</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu
-        augue purus. Aenean et semper lorem, sit amet dictum lectus.
-      </p>
+      <div className="header-intro">
+        <h1 id="headerTitle" className="header-intro-title">
+          Milena Barot
+        </h1>
+        <AnimatePresence>
+          <motion.p
+            initial={{ opacity: 0, x: -450 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            className="header-intro-body"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu
+            augue purus. Aenean et semper lorem, sit amet dictum lectus.
+          </motion.p>
+        </AnimatePresence>
+      </div>
     </div>
   );
 }
