@@ -1,0 +1,22 @@
+.contact {
+  input[type="text"],
+  input[type="email"] {
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+
+  &-textArea {
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+
+  &-successMessage {
+    color: darkgreen;
+    padding: 10px 15px;
+  }
+
+  &-errorMessage {
+    color: red;
+    padding: 10px 15px;
+  }
+}
