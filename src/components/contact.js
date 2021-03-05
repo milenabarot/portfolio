@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState, useEffect } from "react";
 import "../styles/contact.scss";
 
@@ -9,8 +10,6 @@ function Contact() {
     disabled: false,
     emailSent: null,
   });
-
-  useEffect(() => {});
 
   const handleChange = (event) => {
     const target = event.target;
@@ -26,7 +25,14 @@ function Contact() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    setContactForm({ ...contactForm, disabled: true, emailSent: true });
+    axios
+      .post("http://localhost:3030/api/email", contactForm)
+      .then((res) => {
+        setContactForm({ ...contactForm, disabled: false, emailSent: true });
+      })
+      .catch((err) => {
+        setContactForm({ ...contactForm, disabled: false, emailSent: false });
+      });
   };
 
   console.log(contactForm);
