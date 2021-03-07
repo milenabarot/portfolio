@@ -66,19 +66,20 @@ function NavBar() {
         className="navBar-progressBar"
       ></div>
       <nav className="navBar">
-        {isNavBarTitleVisible && (
-          <AnimatePresence>
+        <AnimatePresence exitBeforeEnter>
+          {isNavBarTitleVisible && (
             <motion.h1
               initial={{ opacity: 0, x: -250 }}
               animate={{ opacity: 1, x: 150 }}
-              exit={{ opacity: 0, x: 300 }}
+              exit={{ opacity: 0, x: -300 }}
               transition={{ duration: 0.8 }}
+              key={"navbar-title"}
               className="navBar-title"
             >
               Milena Barot
             </motion.h1>
-          </AnimatePresence>
-        )}
+          )}
+        </AnimatePresence>
         <div className="navBar-wrapListAndButton">
           <AnimatePresence>
             {isNavBarOpen ? (

@@ -67,10 +67,10 @@ function Projects() {
   console.log(handleCardClick);
 
   return (
-    <div id="projects">
+    <div className="projects" id="projects">
       <h2 className="projects-mainTitle">My projects</h2>
       <AnimateSharedLayout type="crossfade">
-        <motion.div layout className="projects">
+        <ul className="projects-list">
           {projects.map((project) => {
             return (
               <ProjectCard
@@ -80,7 +80,7 @@ function Projects() {
               />
             );
           })}
-        </motion.div>
+        </ul>
       </AnimateSharedLayout>
     </div>
   );

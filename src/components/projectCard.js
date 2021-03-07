@@ -5,11 +5,17 @@ import classNames from "classnames";
 
 function ProjectCard(props) {
   return (
-    <motion.div
-      whileHover={{ scale: 1.08 }}
+    <motion.li
       className={classNames("projectCard", {
         projectCard_isSelected: props.project.selected,
       })}
+      layout
+      transition={{
+        duration: 0.5,
+        bounce: 0,
+        type: "spring",
+        ease: "easeInOut",
+      }}
       onClick={() => props.onClick(props.project.id)}
     >
       <div
@@ -24,7 +30,7 @@ function ProjectCard(props) {
           link={props.project.link}
         />
       )}
-    </motion.div>
+    </motion.li>
   );
 }
 
