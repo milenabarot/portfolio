@@ -9,6 +9,11 @@
 
   &-title {
     margin-bottom: 15px;
+    border-bottom: 3px solid transparent;
+
+    &:hover {
+      border-bottom: 3px solid black;
+    }
     & a {
       text-decoration: none;
       color: black;
