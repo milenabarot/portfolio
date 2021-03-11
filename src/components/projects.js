@@ -48,6 +48,14 @@ function Projects() {
       link: "https://github.com/milenabarot/Shop-website",
       selected: false,
     },
+    {
+      id: 5,
+      title: "Back end API",
+      moreInfo: "more info...",
+      imgScr: beach,
+      link: "https://github.com/milenabarot/Shop-website",
+      selected: false,
+    },
   ]);
 
   const handleCardClick = (id) => {

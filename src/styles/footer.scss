@@ -1,0 +1,49 @@
+@import "../styles/variables.scss";
+
+.footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 70px;
+
+  &-title {
+    margin-bottom: 15px;
+    & a {
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
+
+  &-links {
+    display: flex;
+    align-items: center;
+  }
+
+  &-link {
+    margin: 10px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: antiquewhite;
+    display: flex;
+    max-width: 50px;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: $light-blue;
+    }
+
+    &_image {
+      max-width: 88%;
+    }
+  }
+
+  &-info {
+    padding-top: 30px;
+    font-size: 15px;
+  }
+}
