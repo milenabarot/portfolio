@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import "../styles/contact.scss";
+import { motion } from "framer-motion";
 
 function Contact() {
   const [contactForm, setContactForm] = useState({
@@ -10,6 +11,31 @@ function Contact() {
     disabled: false,
     emailSent: null,
   });
+  const [isContactComponentVisible, setIsContactComponentVisible] = useState(
+    false
+  );
+
+  useEffect(() => {
+    let options = {
+      threshold: [0, 0.5, 1],
+    };
+
+    let observer = new IntersectionObserver(
+      shouldShowContactComponent,
+      options
+    );
+
+    let targetElement = document.querySelector("#contact");
+    observer.observe(targetElement);
+  }, []);
+
+  const shouldShowContactComponent = (targets, observer) => {
+    const target = targets[0];
+
+    if (target.isIntersecting === true) {
+      setIsContactComponentVisible(true);
+    }
+  };
 
   const handleChange = (event) => {
     const target = event.target;
@@ -28,65 +54,82 @@ function Contact() {
     axios
       .post("http://localhost:3030/api/email", contactForm)
       .then((res) => {
-        setContactForm({ ...contactForm, disabled: false, emailSent: true });
+        setContactForm({ ...contactForm, disabled: true, emailSent: true });
       })
       .catch((err) => {
         setContactForm({ ...contactForm, disabled: false, emailSent: false });
       });
   };
 
+  const variants = {
+    show: { opacity: 1, y: 0 },
+    hide: { opacity: 0, y: "80%" },
+  };
+
   console.log(contactForm);
 
   return (
-    <div className="contact" id="contact">
-      <h2 className="contact-title">Contact</h2>
-      <form onSubmit={handleSubmit} className="contact-form">
-        <label htmlFor="name"></label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={contactForm.name}
-          onChange={handleChange}
-          placeholder="Name"
-        ></input>
-        <label htmlFor="email"></label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={contactForm.email}
-          onChange={handleChange}
-          placeholder="Email"
-        ></input>
-        <label htmlFor="message"></label>
-        <textarea
-          className="contact-form-textArea"
-          type="text"
-          rows="3"
-          id="message"
-          name="message"
-          placeholder="Message..."
-          form="usrform"
-          value={contactForm.message}
-          onChange={handleChange}
-        ></textarea>
-        <button
-          className="contact-form-button"
-          type="submit"
-          disabled={contactForm.disabled}
-        >
-          Send
-        </button>
+    <>
+      <div id="contact"></div>
+      <motion.div
+        className="contact"
+        animate={isContactComponentVisible ? "show" : "hide"}
+        initial="hide"
+        variants={variants}
+        transition={{ duration: 1, delay: 0.3 }}
+      >
+        <h2 className="contact-title">Contact</h2>
+        <form onSubmit={handleSubmit} className="contact-form">
+          <label htmlFor="name"></label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={contactForm.name}
+            onChange={handleChange}
+            placeholder="Name"
+            required
+          ></input>
+          <label htmlFor="email"></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={contactForm.email}
+            onChange={handleChange}
+            placeholder="Email"
+            required
+          ></input>
+          <label htmlFor="message"></label>
+          <textarea
+            className="contact-form-textArea"
+            type="text"
+            rows="3"
+            id="message"
+            name="message"
+            placeholder="Message..."
+            form="usrform"
+            value={contactForm.message}
+            onChange={handleChange}
+            required
+          ></textarea>
+          <button
+            className="contact-form-button"
+            type="submit"
+            disabled={contactForm.disabled}
+          >
+            Send
+          </button>
 
-        {contactForm.emailSent === true && (
-          <p className="contact-form-successMessage">Email sent!</p>
-        )}
-        {contactForm.emailSent === false && (
-          <p className="contact-form-errorMessage">Email not sent!</p>
-        )}
-      </form>
-    </div>
+          {contactForm.emailSent === true && (
+            <p className="contact-form-successMessage">Email sent!</p>
+          )}
+          {contactForm.emailSent === false && (
+            <p className="contact-form-errorMessage">Email not sent!</p>
+          )}
+        </form>
+      </motion.div>
+    </>
   );
 }
 
