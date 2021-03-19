@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import "../styles/contact.scss";
 import { motion } from "framer-motion";
+import useComponentVisibility from "../hooks/useComponentVisibility";
 
 function Contact() {
   const [contactForm, setContactForm] = useState({
@@ -11,31 +12,8 @@ function Contact() {
     disabled: false,
     emailSent: null,
   });
-  const [isContactComponentVisible, setIsContactComponentVisible] = useState(
-    false
-  );
 
-  useEffect(() => {
-    let options = {
-      threshold: [0, 0.5, 1],
-    };
-
-    let observer = new IntersectionObserver(
-      shouldShowContactComponent,
-      options
-    );
-
-    let targetElement = document.querySelector("#contact");
-    observer.observe(targetElement);
-  }, []);
-
-  const shouldShowContactComponent = (targets, observer) => {
-    const target = targets[0];
-
-    if (target.isIntersecting === true) {
-      setIsContactComponentVisible(true);
-    }
-  };
+  const isContactComponentVisible = useComponentVisibility("contact");
 
   const handleChange = (event) => {
     const target = event.target;

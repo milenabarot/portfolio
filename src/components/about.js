@@ -1,31 +1,12 @@
 import "../styles/about.scss";
 import profilepic from "../images/profilepic.jpg";
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import useComponentVisibility from "../hooks/useComponentVisibility";
 
 function About() {
-  const [isAboutComponentVisible, setIsAboutComponentVisible] = useState(false);
-
   // using intersection observer API to make the about component show or hide
 
-  useEffect(() => {
-    let options = {
-      threshold: [1],
-    };
-
-    let observer = new IntersectionObserver(shouldShowAboutComponent, options);
-
-    let targetElement = document.querySelector("#about");
-    observer.observe(targetElement);
-  }, []);
-
-  const shouldShowAboutComponent = (targets, observer) => {
-    const target = targets[0];
-
-    if (target.isIntersecting === true) {
-      setIsAboutComponentVisible(true);
-    }
-  };
+  const isAboutComponentVisible = useComponentVisibility("about");
 
   const variants = {
     show: { opacity: 1, y: 0 },

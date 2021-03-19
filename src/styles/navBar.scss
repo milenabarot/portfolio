@@ -2,6 +2,8 @@
   position: fixed;
   display: flex;
   width: 100%;
+  z-index: 999;
+  pointer-events: none;
 
   &-title {
     margin: 20px;
@@ -22,6 +24,7 @@
   &-menuItems {
     display: flex;
     list-style: none;
+    pointer-events: auto;
   }
 
   &-menuItem {
@@ -35,6 +38,7 @@
     cursor: pointer;
     padding: 20px;
     transition: 0.4s ease-in-out;
+    pointer-events: auto;
 
     &_isOpen {
       .navBar-hamburgerButtonLine_isLine1 {
