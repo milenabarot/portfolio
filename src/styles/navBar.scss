@@ -7,12 +7,16 @@
 
   &-title {
     margin: 20px;
+    pointer-events: auto;
+    font-size: 25px;
+    font-weight: bold;
   }
   &-progressBar {
     position: fixed;
     background-color: grey;
     height: 5px;
     top: 0;
+    z-index: 999;
   }
 
   &-wrapListAndButton {

@@ -70,16 +70,17 @@ function NavBar() {
       <nav className="navBar">
         <AnimatePresence exitBeforeEnter>
           {isNavBarTitleVisible && (
-            <motion.h1
+            <motion.a
               initial={{ opacity: 0, x: "-30%" }}
               animate={{ opacity: 1, x: "40%" }}
               exit={{ opacity: 0, x: "-30%" }}
               transition={{ duration: 0.8 }}
               key={"navbar-title"}
               className="navBar-title"
+              href="#top"
             >
               Milena Barot
-            </motion.h1>
+            </motion.a>
           )}
         </AnimatePresence>
         <div className="navBar-wrapListAndButton">

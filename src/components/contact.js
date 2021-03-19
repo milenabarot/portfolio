@@ -9,21 +9,39 @@ function Contact() {
     name: "",
     email: "",
     message: "",
-    disabled: false,
+    disabled: true,
     emailSent: null,
   });
 
   const isContactComponentVisible = useComponentVisibility("contact");
 
+  // form validation
   const handleChange = (event) => {
     const target = event.target;
     const value = target.value;
     const name = target.name;
 
+    const nameField = document.querySelector("#name");
+    const emailField = document.querySelector("#email");
+    const messageField = document.querySelector("#message");
+
+    const isValidName = nameField.checkValidity();
+    const isValidEmail = emailField.checkValidity();
+    const isValidMessage = messageField.checkValidity();
+
+    let isSendButtonDisabled = true;
+
+    if (isValidName && isValidEmail && isValidMessage) {
+      isSendButtonDisabled = false;
+    }
+
     setContactForm({
       ...contactForm,
       [name]: value,
+      disabled: isSendButtonDisabled,
     });
+
+    //form validity
   };
 
   const handleSubmit = (event) => {
@@ -32,7 +50,13 @@ function Contact() {
     axios
       .post("http://localhost:3030/api/email", contactForm)
       .then((res) => {
-        setContactForm({ ...contactForm, disabled: true, emailSent: true });
+        setContactForm({
+          name: "",
+          email: "",
+          message: "",
+          disabled: true,
+          emailSent: true,
+        });
       })
       .catch((err) => {
         setContactForm({ ...contactForm, disabled: false, emailSent: false });
@@ -66,7 +90,6 @@ function Contact() {
             value={contactForm.name}
             onChange={handleChange}
             placeholder="Name"
-            required
           ></input>
           <label htmlFor="email"></label>
           <input
@@ -76,7 +99,6 @@ function Contact() {
             value={contactForm.email}
             onChange={handleChange}
             placeholder="Email"
-            required
           ></input>
           <label htmlFor="message"></label>
           <textarea
@@ -89,7 +111,6 @@ function Contact() {
             form="usrform"
             value={contactForm.message}
             onChange={handleChange}
-            required
           ></textarea>
           <button
             className="contact-form-button"
