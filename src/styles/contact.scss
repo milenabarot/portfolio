@@ -22,7 +22,7 @@
       width: 290px;
       height: 4px;
       margin-left: -122px;
-      background-color: lightgray;
+      background-color: $dark-gray;
     }
   }
 
@@ -35,10 +35,8 @@
     input[type="text"],
     input[type="email"] {
       border: none;
-      // border-bottom: 4px solid $light-blue;
-      border: 2px solid $light-blue;
+      border: 2px solid $dark-gray;
       border-radius: 25px;
-
       padding: 10px;
       outline: none;
       margin: 10px 0 18px 0;
@@ -48,8 +46,7 @@
 
     &-textArea {
       border: none;
-      // border-bottom: 4px solid $light-blue;
-      border: 2px solid $light-blue;
+      border: 2px solid $dark-gray;
       border-radius: 25px;
       margin: 10px 0 18px;
       padding: 10px;
@@ -62,7 +59,7 @@
 
     &-button {
       background-color: transparent;
-      border: 2px solid $light-blue;
+      border: 3px solid $middle-blue;
       cursor: pointer;
       color: black;
       padding: 7px 5px 6px;
@@ -73,24 +70,24 @@
       transition: 0.3s ease-in-out;
 
       &:hover {
-        color: $light-blue;
-        border: 2px solid grey;
+        color: black;
+        border: 3px solid $dark-gray;
       }
 
       &:disabled {
-        border: 2px solid grey;
-        color: grey;
+        border: 3px solid $light-gray;
+        color: $light-gray;
         cursor: not-allowed;
       }
     }
     &-successMessage {
-      color: darkgreen;
-      padding: 10px 15px;
+      color: darkblue;
+      padding: 10px 0px;
     }
 
     &-errorMessage {
       color: red;
-      padding: 10px 15px;
+      padding: 10px 0px;
     }
   }
 }

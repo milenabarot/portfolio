@@ -1,3 +1,5 @@
+@import "../styles/variables.scss";
+
 .projectCard {
   flex-basis: 25%;
   background-color: white;
@@ -5,7 +7,7 @@
   margin: 20px;
   border-radius: 10px;
   min-width: 260px;
-  box-shadow: 0px 3px 8px 4px rgba(240, 240, 240);
+  box-shadow: 0px 8px 8px 4px rgba(240, 240, 240);
   transition: 500ms ease-in-out;
   cursor: pointer;
 

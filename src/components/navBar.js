@@ -1,7 +1,6 @@
-import classNames from "classnames";
 import { useEffect, useState } from "react";
 import "../styles/navBar.scss";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 
 function NavBar() {
   const [isNavBarOpen, setIsNavBarOpen] = useState(false);
@@ -105,15 +104,27 @@ function NavBar() {
             ) : null}
           </AnimatePresence>
 
-          <button
-            className={classNames("navBar-hamburgerButton", {
-              "navBar-hamburgerButton_isOpen": isNavBarOpen,
-            })}
-            onClick={toggleNavBar}
-          >
-            <div className="navBar-hamburgerButtonLine navBar-hamburgerButtonLine_isLine1"></div>
-            <div className="navBar-hamburgerButtonLine navBar-hamburgerButtonLine_isLine2"></div>
-            <div className="navBar-hamburgerButtonLine navBar-hamburgerButtonLine_isLine3"></div>
+          <button className="navBar-hamburgerButton" onClick={toggleNavBar}>
+            <AnimateSharedLayout>
+              <motion.p layout className="navBar-hamburgerButtonTag">
+                &lt;
+              </motion.p>
+              <AnimatePresence>
+                {isNavBarOpen && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="navBar-hamburgerButtonSlash"
+                  ></motion.div>
+                )}
+              </AnimatePresence>
+
+              <motion.p layout className="navBar-hamburgerButtonTag">
+                &gt;
+              </motion.p>
+            </AnimateSharedLayout>
           </button>
         </div>
       </nav>
