@@ -1,3 +1,5 @@
+@import "../styles/variables.scss";
+
 .about {
   display: flex;
   justify-content: center;
@@ -16,13 +18,8 @@
       width: 290px;
       height: 4px;
       margin-left: -122px;
-      background-color: lightgray;
+      background-color: $dark-gray;
     }
-
-    // &:hover::after {
-    //   width: 290%;
-    //   left: -66px;
-    // }
   }
   &-image {
     // max-width: 250px;
