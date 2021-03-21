@@ -2,15 +2,21 @@
   position: fixed;
   display: flex;
   width: 100%;
+  z-index: 999;
+  pointer-events: none;
 
   &-title {
     margin: 20px;
+    pointer-events: auto;
+    font-size: 25px;
+    font-weight: bold;
   }
   &-progressBar {
     position: fixed;
     background-color: grey;
     height: 5px;
     top: 0;
+    z-index: 999;
   }
 
   &-wrapListAndButton {
@@ -22,6 +28,7 @@
   &-menuItems {
     display: flex;
     list-style: none;
+    pointer-events: auto;
   }
 
   &-menuItem {
@@ -35,6 +42,7 @@
     cursor: pointer;
     padding: 20px;
     transition: 0.4s ease-in-out;
+    pointer-events: auto;
 
     &_isOpen {
       .navBar-hamburgerButtonLine_isLine1 {

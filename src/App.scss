@@ -1,23 +1,42 @@
 @import "./styles/variables.scss";
 
 .app {
-  background-color: white;
+  background: linear-gradient(45deg, white 75%, aliceblue 20%);
   font-family: $main-font-family;
   font-weight: 300;
 }
+.about-contact-footer-wrap {
+  background: linear-gradient(345deg, aliceblue 60%, white 20%);
+}
 
+.contact-footer-wrap {
+  background: linear-gradient(
+    369deg,
+    rgba(174, 197, 235, 0.5) 44%,
+    transparent 20%
+  );
+}
+// rgba(174, 197, 235, 0.5)
 // * {
 //   margin-bottom: 300px;
 // }
 
 .header,
-#projects,
+// #projects,
 #about,
-#contact,
-.footer {
-  margin-bottom: 300px;
+#contact {
+  margin-bottom: 200px;
+}
+
+.projects {
+  margin-bottom: 150px;
 }
 
 a {
   text-decoration: none;
+  color: black;
+}
+
+h2 {
+  font-size: 35px;
 }

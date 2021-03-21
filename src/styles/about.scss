@@ -1,0 +1,41 @@
+.about {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  &-title {
+    position: relative;
+    text-decoration: none;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -30px;
+      left: 20%;
+      width: 290px;
+      height: 4px;
+      margin-left: -122px;
+      background-color: lightgray;
+    }
+
+    // &:hover::after {
+    //   width: 290%;
+    //   left: -66px;
+    // }
+  }
+  &-image {
+    // max-width: 250px;
+    padding: 50px;
+
+    & img {
+      max-width: 250px;
+      border-radius: 10px;
+    }
+  }
+  &-info {
+    text-align: center;
+    max-width: 700px;
+    font-size: 20px;
+  }
+}

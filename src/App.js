@@ -12,9 +12,13 @@ function App() {
       <NavBar />
       <Header />
       <Projects />
-      <About />
-      <Contact />
-      <Footer />
+      <div className="about-contact-footer-wrap">
+        <About />
+        <div className="contact-footer-wrap">
+          <Contact />
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 }

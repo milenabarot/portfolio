@@ -3,6 +3,14 @@
 .header {
   padding: 150px;
   font-family: $main-font-family;
+  height: 100vh;
+  // background-color: aliceblue;
+
+  // background: linear-gradient(
+  //   45deg,
+  //   aliceblue 39%,
+  //   rgba(174, 197, 235, 0.5) 20%
+  // );
 
   &-intro {
     display: flex;

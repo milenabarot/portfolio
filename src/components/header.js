@@ -5,7 +5,7 @@ import "../styles/header.scss";
 
 function Header() {
   return (
-    <div className="header">
+    <div className="header" id="header">
       <div className="header-intro">
         <h1 id="headerTitle" className="header-intro-title">
           Milena Barot
