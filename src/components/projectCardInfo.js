@@ -8,8 +8,13 @@ function ProjectCardInfo(props) {
   });
   return (
     <animated.div className="projectCardInfo" style={style}>
-      <p>{props.moreInfo}</p>
-      <a href={props.link} target="_blank" rel="noopener noreferrer">
+      <p className="projectCardInfo-details">{props.moreInfo}</p>
+      <a
+        href={props.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="projectCardInfo-view"
+      >
         View on github
       </a>
     </animated.div>

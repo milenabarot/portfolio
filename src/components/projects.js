@@ -72,11 +72,10 @@ function Projects() {
 
     setProjects(updatedProjects);
   };
-  console.log(handleCardClick);
 
   return (
     <div className="projects" id="projects">
-      <h2 className="projects-mainTitle">My projects</h2>
+      <h2 className="projects-mainTitle">Projects</h2>
       <AnimateSharedLayout type="crossfade">
         <ul className="projects-list">
           {projects.map((project) => {
