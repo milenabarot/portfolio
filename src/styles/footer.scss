@@ -9,10 +9,23 @@
 
   &-title {
     margin-bottom: 15px;
-    border-bottom: 3px solid transparent;
-
-    &:hover {
-      border-bottom: 3px solid black;
+    position: relative;
+    text-decoration: none;
+    &::after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: -3px;
+      content: "";
+      display: block;
+      height: 3px;
+      left: 50%;
+      position: absolute;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+      background-color: $dark-gray;
+    }
+    &:hover::after {
+      width: 100%;
+      left: 0;
     }
     & a {
       text-decoration: none;
@@ -34,6 +47,7 @@
     background-color: antiquewhite;
     display: flex;
     max-width: 50px;
+    max-height: 50px;
     justify-content: center;
     transition: 0.3s ease-in-out;
 

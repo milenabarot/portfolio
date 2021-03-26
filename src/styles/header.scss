@@ -4,13 +4,14 @@
   padding: 150px;
   font-family: $main-font-family;
   height: 100vh;
-  // background-color: aliceblue;
+  margin-bottom: 155px;
 
-  // background: linear-gradient(
-  //   45deg,
-  //   aliceblue 39%,
-  //   rgba(174, 197, 235, 0.5) 20%
-  // );
+  @media only screen and (max-width: 600px) {
+    margin-bottom: 100px;
+  }
+  @media only screen and (max-width: 460px) {
+    margin-bottom: 200px;
+  }
 
   &-intro {
     display: flex;
@@ -22,6 +23,14 @@
     &-title {
       font-size: 100px;
       font-weight: 500;
+      text-align: center;
+
+      @media only screen and (max-width: 900px) {
+        font-size: 88px;
+      }
+      @media only screen and (max-width: 600px) {
+        font-size: 80px;
+      }
     }
     &-body {
       padding: 20px;
@@ -29,6 +38,15 @@
       text-align: center;
       font-size: 30px;
       font-weight: lighter;
+
+      @media only screen and (max-width: 600px) {
+        font-size: 22px;
+        padding: 20px 5px;
+        min-width: 200%;
+      }
+      @media only screen and (max-width: 460px) {
+        min-width: 400%;
+      }
     }
   }
 }

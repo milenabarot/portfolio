@@ -13,10 +13,6 @@
   background: linear-gradient(369deg, $middle-blue 44%, transparent 20%);
 }
 
-.header {
-  margin-bottom: 190px;
-}
-
 #about,
 #contact {
   margin-bottom: 250px;
@@ -29,4 +25,10 @@ a {
 
 h2 {
   font-size: 35px;
+}
+
+@media only screen and (max-width: 580px) {
+  h2 {
+    font-size: 32px;
+  }
 }

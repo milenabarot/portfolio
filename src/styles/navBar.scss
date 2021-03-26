@@ -12,6 +12,13 @@
     pointer-events: auto;
     font-size: 25px;
     font-weight: bold;
+
+    @media only screen and (max-width: 900px) {
+      font-size: 20px;
+    }
+    @media only screen and (max-width: 460px) {
+      margin: 20px 0px 20px -35px;
+    }
   }
   &-progressBar {
     position: fixed;
@@ -25,6 +32,10 @@
     display: flex;
     margin-left: auto;
     align-items: center;
+
+    @media only screen and (max-width: 600px) {
+      flex-direction: column-reverse;
+    }
   }
 
   &-menuItems {
@@ -33,12 +44,24 @@
     pointer-events: auto;
     font-size: 20px;
     font-weight: 400;
+
+    @media only screen and (max-width: 600px) {
+      padding-left: 0;
+      margin-top: 0;
+      align-items: center;
+      flex-direction: column;
+    }
   }
 
   &-menuItem {
     margin-left: 17px;
     position: relative;
     text-decoration: none;
+
+    @media only screen and (max-width: 600px) {
+      margin-left: 0px;
+      padding-top: 8px;
+    }
     &::after {
       background: none repeat scroll 0 0 transparent;
       bottom: -3px;

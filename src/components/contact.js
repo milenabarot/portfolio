@@ -40,8 +40,6 @@ function Contact() {
       [name]: value,
       disabled: isSendButtonDisabled,
     });
-
-    //form validity
   };
 
   const handleSubmit = (event) => {
@@ -67,8 +65,6 @@ function Contact() {
     show: { opacity: 1, y: 0 },
     hide: { opacity: 0, y: "80%" },
   };
-
-  console.log(contactForm);
 
   return (
     <>
@@ -111,6 +107,7 @@ function Contact() {
             form="usrform"
             value={contactForm.message}
             onChange={handleChange}
+            minLength={1}
           ></textarea>
           <button
             className="contact-form-button"
