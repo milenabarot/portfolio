@@ -10,24 +10,7 @@
   margin-bottom: 200px;
 
   &-title {
-    position: relative;
-    text-decoration: none;
-    margin-bottom: 75px;
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      bottom: -30px;
-      left: 26%;
-      width: 290px;
-      height: 4px;
-      margin-left: -122px;
-      background-color: $dark-gray;
-      @media only screen and (max-width: 600px) {
-        width: 200px;
-        left: 67%;
-      }
-    }
+    @include title-underline;
   }
 
   .contact-form {

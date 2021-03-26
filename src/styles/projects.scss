@@ -25,24 +25,6 @@
     }
   }
   &-mainTitle {
-    text-align: center;
-    position: relative;
-    text-decoration: none;
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      bottom: -30px;
-      left: 30%;
-      width: 290px;
-      height: 4px;
-      margin-left: -122px;
-      background-color: $dark-gray;
-
-      @media only screen and (max-width: 600px) {
-        width: 200px;
-        left: 69%;
-      }
-    }
+    @include title-underline;
   }
 }

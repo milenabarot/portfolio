@@ -8,3 +8,20 @@ $middle-blue: rgba(174, 197, 235, 0.5);
 
 //font
 $main-font-family: "Josefin Sans", sans-serif;
+
+@mixin title-underline {
+  position: relative;
+  text-decoration: none;
+  margin-bottom: 75px;
+  padding: 0px 46px;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -30px;
+    left: 0%;
+    width: 100%;
+    height: 4px;
+    background-color: $dark-gray;
+  }
+}
