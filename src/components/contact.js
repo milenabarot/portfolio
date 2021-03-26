@@ -86,6 +86,7 @@ function Contact() {
             value={contactForm.name}
             onChange={handleChange}
             placeholder="Name"
+            required
           ></input>
           <label htmlFor="email"></label>
           <input
@@ -95,6 +96,7 @@ function Contact() {
             value={contactForm.email}
             onChange={handleChange}
             placeholder="Email"
+            required
           ></input>
           <label htmlFor="message"></label>
           <textarea
@@ -107,7 +109,7 @@ function Contact() {
             form="usrform"
             value={contactForm.message}
             onChange={handleChange}
-            minLength={1}
+            required
           ></textarea>
           <button
             className="contact-form-button"
