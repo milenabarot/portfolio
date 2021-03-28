@@ -19,9 +19,30 @@
     }
   }
   &-info {
-    text-align: center;
-    max-width: 700px;
+    max-width: 950px;
     font-size: 22px;
     padding: 0 40px;
+  }
+  &-wordArray {
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
+    width: 300px;
+    padding-left: 50px;
+    &Animation {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      height: 50px;
+      justify-content: flex-start;
+      width: 250px;
+      font-size: 25px;
+      font-weight: 400;
+
+      &Words {
+        padding-left: 10px;
+        color: rgba(44, 82, 141, 0.9);
+      }
+    }
   }
 }
