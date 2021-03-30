@@ -1,16 +1,16 @@
-@import "./styles/variables.scss";
+@use "/src/styles/variables.scss" as v;
 
 .app {
-  background: linear-gradient(45deg, white 75%, $alice-blue 20%);
-  font-family: $main-font-family;
+  background: linear-gradient(45deg, white 75%, v.$alice-blue 20%);
+  font-family: v.$main-font-family;
   font-weight: 300;
 }
 .about-contact-footer-wrap {
-  background: linear-gradient(345deg, $alice-blue 60%, white 20%);
+  background: linear-gradient(345deg, v.$alice-blue 60%, white 20%);
 }
 
 .contact-footer-wrap {
-  background: linear-gradient(369deg, $middle-blue 44%, transparent 20%);
+  background: linear-gradient(369deg, v.$middle-blue 44%, transparent 20%);
 }
 
 #about,

@@ -1,4 +1,4 @@
-@import "../styles/variables.scss";
+@use "/src/styles/variables.scss" as v;
 
 .navBar {
   position: fixed;
@@ -22,7 +22,7 @@
   }
   &-progressBar {
     position: fixed;
-    background-color: $dark-gray;
+    background-color: v.$dark-gray;
     height: 5px;
     top: 0;
     z-index: 999;
@@ -44,6 +44,7 @@
     pointer-events: auto;
     font-size: 20px;
     font-weight: 400;
+    margin-top: 24px;
 
     @media only screen and (max-width: 600px) {
       padding-left: 0;
@@ -72,7 +73,7 @@
       position: absolute;
       transition: width 0.3s ease 0s, left 0.3s ease 0s;
       width: 0;
-      background-color: $light-gray;
+      background-color: v.$light-gray;
     }
 
     &:hover::after {
@@ -98,6 +99,10 @@
       height: 3px;
       margin-top: 2px;
       transform: rotate(-70deg);
+
+      @media only screen and (max-width: 600px) {
+        height: 2px;
+      }
     }
     &Tag {
       font-size: 29px;

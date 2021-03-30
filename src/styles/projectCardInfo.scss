@@ -1,4 +1,4 @@
-@import "../styles/variables.scss";
+@use "/src/styles/variables.scss" as v;
 
 .projectCardInfo {
   padding: 0 10px;
@@ -16,7 +16,7 @@
       position: absolute;
       transition: width 0.3s ease 0s, left 0.3s ease 0s;
       width: 0;
-      background-color: $light-gray;
+      background-color: v.$light-gray;
     }
     &:hover::after {
       width: 100%;

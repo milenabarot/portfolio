@@ -1,4 +1,4 @@
-@import "../styles/variables.scss";
+@use "/src/styles/variables.scss" as v;
 
 .footer {
   display: flex;
@@ -21,7 +21,7 @@
       position: absolute;
       transition: width 0.3s ease 0s, left 0.3s ease 0s;
       width: 0;
-      background-color: $dark-gray;
+      background-color: v.$dark-gray;
     }
     &:hover::after {
       width: 100%;
@@ -44,7 +44,7 @@
     margin: 10px;
     border-radius: 12px;
     overflow: hidden;
-    background-color: transparent;
+    background-color: white;
     display: flex;
     max-width: 50px;
     max-height: 50px;

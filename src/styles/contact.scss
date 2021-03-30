@@ -1,16 +1,16 @@
-@import "../styles/variables.scss";
+@use "/src/styles/variables.scss" as v;
 
 .contact {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: $main-font-family;
+  font-family: v.$main-font-family;
   font-weight: bold;
   margin-bottom: 200px;
 
   &-title {
-    @include title-underline;
+    @include v.title-underline;
   }
 
   .contact-form {
@@ -22,24 +22,24 @@
     input[type="text"],
     input[type="email"] {
       border: none;
-      border: 2px solid $dark-gray;
+      border: 2px solid v.$dark-gray;
       border-radius: 5px;
       padding: 15px;
       outline: none;
       margin: 10px 0 18px 0;
-      font-family: $main-font-family;
+      font-family: v.$main-font-family;
       font-size: 15px;
       box-shadow: 3px 10px 10px -3px lightgray;
     }
 
     &-textArea {
       border: none;
-      border: 2px solid $dark-gray;
+      border: 2px solid v.$dark-gray;
       border-radius: 5px;
       margin: 10px 0 25px;
       padding: 15px;
       outline: none;
-      font-family: $main-font-family;
+      font-family: v.$main-font-family;
       font-size: 15px;
       max-height: 70px;
       resize: none;
@@ -48,12 +48,12 @@
 
     &-button {
       background-color: transparent;
-      border: 2px solid $middle-blue;
+      border: 2px solid v.$middle-blue;
       cursor: pointer;
       color: black;
       padding: 7px 5px 6px;
       border-radius: 5px;
-      font-family: $main-font-family;
+      font-family: v.$main-font-family;
       font-size: 17px;
       max-width: 70px;
       transition: 0.3s ease-in-out;
@@ -64,8 +64,8 @@
       }
 
       &:disabled {
-        border: 2px solid $light-gray;
-        color: $light-gray;
+        border: 2px solid v.$light-gray;
+        color: v.$light-gray;
         cursor: not-allowed;
       }
     }

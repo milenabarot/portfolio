@@ -1,8 +1,12 @@
 import { useState } from "react";
-import sign from "../images/sign.jpg";
-import beach from "../images/beach.JPG";
-import { motion, AnimateSharedLayout } from "framer-motion";
 
+import sign from "../images/sign.jpg";
+import dashboardImage from "../images/dashboardImage.PNG";
+import toDoListImage from "../images/toDoListImage.PNG";
+import toDoListReactImage from "../images/toDoListReactImage.PNG";
+import bakeryImage from "../images/bakeryImage.PNG";
+
+import { AnimateSharedLayout } from "framer-motion";
 import ProjectCard from "../components/projectCard";
 import "../styles/projects.scss";
 
@@ -10,49 +14,52 @@ function Projects() {
   const [projects, setProjects] = useState([
     {
       id: 0,
-      title: "Dashboard",
+      title: "My Portfolio",
       moreInfo: "more info...",
-      imgScr: beach,
-      link: "https://github.com/milenabarot/dashboard",
+      imgScr: sign,
+      link: "https://github.com/milenabarot/portfolio",
       selected: false,
+      contain: true,
     },
     {
       id: 1,
-      title: "To Do List with React",
+      title: "Dashboard",
+      moreInfo: "more info...",
+      imgScr: dashboardImage,
+      link: "https://github.com/milenabarot/dashboard",
+      selected: false,
+      contain: true,
+    },
+    {
+      id: 2,
+      title: "Snake Game",
       moreInfo: "more info...",
       imgScr: sign,
       link: "https://github.com/milenabarot/to-do-list-react",
       selected: false,
-    },
-    {
-      id: 2,
-      title: "To Do List with Vanilla JS",
-      moreInfo: "more info...",
-      imgScr: beach,
-      link: "https://github.com/milenabarot/To-Do-List",
-      selected: false,
+      contain: true,
     },
     {
       id: 3,
-      title: "Blog Website",
+      title: "To Do List with React",
       moreInfo: "more info...",
-      imgScr: beach,
-      link: "https://github.com/milenabarot/My-website",
+      imgScr: toDoListReactImage,
+      link: "https://github.com/milenabarot/to-do-list-react",
       selected: false,
     },
     {
       id: 4,
-      title: "Bakery Website",
+      title: "To Do List with Vanilla JS",
       moreInfo: "more info...",
-      imgScr: sign,
-      link: "https://github.com/milenabarot/Shop-website",
+      imgScr: toDoListImage,
+      link: "https://github.com/milenabarot/To-Do-List",
       selected: false,
     },
     {
       id: 5,
-      title: "Back end API",
+      title: "Bakery Website",
       moreInfo: "more info...",
-      imgScr: beach,
+      imgScr: bakeryImage,
       link: "https://github.com/milenabarot/Shop-website",
       selected: false,
     },

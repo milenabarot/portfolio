@@ -1,4 +1,4 @@
-@import "../styles/variables.scss";
+@use "/src/styles/variables.scss" as v;
 
 .projects {
   display: flex;
@@ -25,6 +25,6 @@
     }
   }
   &-mainTitle {
-    @include title-underline;
+    @include v.title-underline;
   }
 }

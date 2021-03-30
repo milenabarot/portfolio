@@ -1,8 +1,8 @@
-@import "../styles/variables.scss";
+@use "/src/styles/variables.scss" as v;
 
 .header {
   padding: 150px;
-  font-family: $main-font-family;
+  font-family: v.$main-font-family;
   height: 100vh;
   margin-bottom: 155px;
 

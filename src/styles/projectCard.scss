@@ -1,4 +1,4 @@
-@import "../styles/variables.scss";
+@use "/src/styles/variables.scss" as v;
 
 .projectCard {
   flex-basis: 25%;
@@ -6,7 +6,7 @@
   padding: 10px 10px 30px 10px;
   margin: 20px;
   min-width: 260px;
-  box-shadow: 3px 10px 10px 5px $light-gray;
+  box-shadow: 3px 10px 10px 5px v.$light-gray;
   transition: 500ms ease-in-out;
   cursor: pointer;
 
@@ -36,6 +36,12 @@
     }
   }
 
+  &_isImageContained {
+    .projectCard-image {
+      background-size: contain;
+    }
+  }
+
   &-image {
     background-position: center;
     background-repeat: no-repeat;
@@ -60,7 +66,7 @@
       position: absolute;
       transition: width 0.3s ease 0s, left 0.3s ease 0s;
       width: 0;
-      background-color: $light-gray;
+      background-color: v.$light-gray;
     }
     &:hover::after {
       width: 100%;

@@ -8,6 +8,7 @@ function ProjectCard(props) {
     <motion.li
       className={classNames("projectCard", {
         projectCard_isSelected: props.project.selected,
+        projectCard_isImageContained: props.project.contain === true,
       })}
       layout
       transition={{
