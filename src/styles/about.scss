@@ -27,21 +27,22 @@
     display: flex;
     justify-content: center;
     margin-top: 65px;
-    width: 300px;
-    padding-left: 50px;
+    width: 100%;
+    padding-left: 80px;
     &Animation {
       display: flex;
       align-items: center;
       overflow: hidden;
-      height: 50px;
+      height: 110px;
       justify-content: flex-start;
-      width: 250px;
-      font-size: 25px;
+      width: 330px;
+      font-size: 27px;
       font-weight: 400;
+      color: rgba(26, 56, 102);
+      padding-top: 60px;
 
       &Words {
         padding-left: 10px;
-        color: rgba(44, 82, 141, 0.9);
       }
     }
   }

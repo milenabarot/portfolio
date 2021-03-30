@@ -1,25 +1,20 @@
 import "../styles/about.scss";
 import profilepic from "../images/profilepic.jpg";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import useComponentVisibility from "../hooks/useComponentVisibility";
-import { useEffect, useState } from "react";
+import Typical from "react-typical";
 
 function About() {
-  const [wordArrayIndex, setWordArrayIndex] = useState(0);
-
-  const wordArray = ["useReact", "useSass", "useAxios", "useResponsiveDesign"];
-
-  useEffect(() => {
-    let timer = setInterval(() => {
-      if (wordArrayIndex === wordArray.length - 1) {
-        setWordArrayIndex(0);
-      } else {
-        setWordArrayIndex(wordArrayIndex + 1);
-      }
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, [wordArrayIndex]);
+  const steps = [
+    "useReact",
+    6000,
+    "useSass",
+    6000,
+    "useAxios",
+    6000,
+    "useResponsiveDesign",
+    8000,
+  ];
 
   // using intersection observer API to make the about component show or hide
 
@@ -67,18 +62,12 @@ function About() {
         <div className="about-wordArray">
           <div className="about-wordArrayAnimation">
             I . . .
-            <AnimatePresence exitBeforeEnter>
-              <motion.p
-                initial={{ opacity: 0, y: 130 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -130 }}
-                transition={{ duration: 0.5 }}
-                key={`wordArray-${wordArrayIndex}`}
-                className="about-wordArrayAnimationWords"
-              >
-                {wordArray[wordArrayIndex]}
-              </motion.p>
-            </AnimatePresence>
+            <Typical
+              wrapper="p"
+              steps={steps}
+              loop={Infinity}
+              className="about-wordArrayAnimationWords"
+            />
           </div>
         </div>
       </motion.div>

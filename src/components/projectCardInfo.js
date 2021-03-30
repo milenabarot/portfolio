@@ -1,13 +1,8 @@
-import { useSpring, animated } from "react-spring";
 import "../styles/projectCardInfo.scss";
 
 function ProjectCardInfo(props) {
-  const style = useSpring({
-    opacity: 1,
-    from: { opacity: 0 },
-  });
   return (
-    <animated.div className="projectCardInfo" style={style}>
+    <div className="projectCardInfo">
       <p className="projectCardInfo-details">{props.moreInfo}</p>
       <a
         href={props.link}
@@ -17,7 +12,7 @@ function ProjectCardInfo(props) {
       >
         View on github
       </a>
-    </animated.div>
+    </div>
   );
 }
 
