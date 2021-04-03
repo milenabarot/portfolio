@@ -1,5 +1,12 @@
 import "../styles/about.scss";
-import profilepic from "../images/profilepic.jpg";
+import bioPic from "../images/bioPic.jpg";
+
+import reactLogo from "../images/logos/reactLogo.png";
+import JSLogo from "../images/logos/JSLogo.png";
+import HTML5Logo from "../images/logos/HTML5Logo.png";
+import sassLogo from "../images/logos/sassLogo.png";
+import gitLogo from "../images/logos/gitLogo.png";
+
 import { motion } from "framer-motion";
 import useComponentVisibility from "../hooks/useComponentVisibility";
 import Typical from "react-typical";
@@ -25,6 +32,8 @@ function About() {
     hide: { opacity: 0, y: "80%" },
   };
 
+  const logoArray = [reactLogo, JSLogo, HTML5Logo, sassLogo, gitLogo];
+
   return (
     <>
       <div id="about"></div>
@@ -37,13 +46,15 @@ function About() {
       >
         <h2 className="about-title">About</h2>
         <div className="about-image">
-          <img src={profilepic} alt="My profile picture" />
+          <img src={bioPic} alt="My profile picture" />
         </div>
         <div className="about-info">
-          I'm a self taught frontend developer, with an Economics background and
-          experience in commerce and data analysis. I work with React, Sass,
-          Axios & Node in my projects and I value responsive design, web
-          accessibility and clean UI.
+          <p>
+            I'm a self taught frontend developer, with an Economics background
+            and experience in commerce and data analysis. I work with React,
+            Sass, Axios & Node in my projects and I value responsive design, web
+            accessibility and clean UI.
+          </p>
           <p>
             I enjoy expanding my coding knowledge and discovering new libraries
             to help me build fun apps and websites.
@@ -70,6 +81,17 @@ function About() {
             />
           </div>
         </div>
+        <ul className="about-logos">
+          {logoArray.map((logo) => {
+            return (
+              <li
+                className="about-logos-image"
+                style={{ backgroundImage: `url(${logo})` }}
+                alt={logo}
+              ></li>
+            );
+          })}
+        </ul>
       </motion.div>
     </>
   );

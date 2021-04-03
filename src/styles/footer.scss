@@ -7,8 +7,18 @@
   align-items: center;
   padding: 70px;
 
+  &-logo-MBLogo {
+    max-width: 92px;
+    margin-bottom: 23px;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
   &-title {
-    margin-bottom: 15px;
+    margin: 15px 0px;
     position: relative;
     text-decoration: none;
     &::after {
@@ -44,7 +54,7 @@
     margin: 10px;
     border-radius: 12px;
     overflow: hidden;
-    background-color: white;
+    background-color: transparent;
     display: flex;
     max-width: 50px;
     max-height: 50px;
@@ -61,7 +71,8 @@
   }
 
   &-info {
-    padding-top: 30px;
+    padding-top: 35px;
     font-size: 15px;
+    margin-bottom: -40px;
   }
 }

@@ -38,12 +38,26 @@
       width: 330px;
       font-size: 27px;
       font-weight: 400;
-      color: rgba(26, 56, 102);
       padding-top: 60px;
 
       &Words {
         padding-left: 10px;
       }
+    }
+  }
+  &-logos {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    padding-top: 70px;
+    &-image {
+      width: 50px;
+      height: 50px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 10px;
     }
   }
 }

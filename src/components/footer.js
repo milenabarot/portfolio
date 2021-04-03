@@ -1,13 +1,13 @@
 import "../styles/footer.scss";
 import linkedinLogo from "../images/linkedinlogo.png";
 import githubLogo from "../images/githublogo.png";
+import MBLogo from "../images/MBLogo.png";
 
 function Footer() {
   return (
     <div className="footer">
       <a href="#top" className="footer-logo">
-        <h2>MB</h2>
-        <img src="" alt="" />
+        <img src={MBLogo} alt="MB Logo" className="footer-logo-MBLogo" />
       </a>
       <div className="footer-title">
         <a

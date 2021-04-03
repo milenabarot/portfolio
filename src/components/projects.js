@@ -14,8 +14,9 @@ function Projects() {
   const [projects, setProjects] = useState([
     {
       id: 0,
-      title: "My Portfolio",
-      moreInfo: "more info...",
+      title: "Portfolio Website",
+      moreInfo:
+        "React, Sass, Node.js, Express, ESLint, Framer Motion, Axios, Responsive Design, React Hooks",
       imgScr: sign,
       link: "https://github.com/milenabarot/portfolio",
       selected: false,
@@ -24,7 +25,8 @@ function Projects() {
     {
       id: 1,
       title: "Dashboard",
-      moreInfo: "more info...",
+      moreInfo:
+        "React, Axios, Pexels API, OpenWeather API, Framer Motion, Responsive Design, React Classes & Hooks, Local Storage",
       imgScr: dashboardImage,
       link: "https://github.com/milenabarot/dashboard",
       selected: false,
@@ -33,7 +35,7 @@ function Projects() {
     {
       id: 2,
       title: "Snake Game",
-      moreInfo: "more info...",
+      moreInfo: "React, Canvas HTML 5",
       imgScr: sign,
       link: "https://github.com/milenabarot/to-do-list-react",
       selected: false,
@@ -42,7 +44,7 @@ function Projects() {
     {
       id: 3,
       title: "To Do List with React",
-      moreInfo: "more info...",
+      moreInfo: "React, CSS, Local Storage",
       imgScr: toDoListReactImage,
       link: "https://github.com/milenabarot/to-do-list-react",
       selected: false,
@@ -50,7 +52,7 @@ function Projects() {
     {
       id: 4,
       title: "To Do List with Vanilla JS",
-      moreInfo: "more info...",
+      moreInfo: "Vanilla JS, HTML 5, CSS, Local Storage",
       imgScr: toDoListImage,
       link: "https://github.com/milenabarot/To-Do-List",
       selected: false,
@@ -58,7 +60,7 @@ function Projects() {
     {
       id: 5,
       title: "Bakery Website",
-      moreInfo: "more info...",
+      moreInfo: "HTML 5, CSS, Vanilla JS, Git",
       imgScr: bakeryImage,
       link: "https://github.com/milenabarot/Shop-website",
       selected: false,

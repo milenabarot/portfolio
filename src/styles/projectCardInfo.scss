@@ -6,6 +6,7 @@
   &-view {
     position: relative;
     text-decoration: none;
+    font-weight: initial;
     &::after {
       background: none repeat scroll 0 0 transparent;
       bottom: -3px;
