@@ -1,7 +1,7 @@
 import "../styles/footer.scss";
-import linkedinLogo from "../images/linkedinlogo.png";
-import githubLogo from "../images/githublogo.png";
-import MBLogo from "../images/MBLogo.png";
+import linkedinLogo from "../images/logos/linkedinlogo.png";
+import githubLogo from "../images/logos/githublogo.png";
+import MBLogo from "../images/logos/MBLogo.png";
 
 function Footer() {
   return (
