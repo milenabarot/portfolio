@@ -7,7 +7,7 @@
   align-items: center;
   padding: 70px;
 
-  &-logo-MBLogo {
+  &--logo-MBLogo {
     max-width: 92px;
     margin-bottom: 23px;
     transition: 0.3s ease-in-out;
@@ -17,7 +17,7 @@
     }
   }
 
-  &-title {
+  &--title {
     margin: 15px 0px;
     position: relative;
     text-decoration: none;
@@ -45,32 +45,31 @@
     }
   }
 
-  &-links {
+  &--links {
     display: flex;
     align-items: center;
+    &-link {
+      margin: 10px;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: transparent;
+      display: flex;
+      max-width: 50px;
+      max-height: 50px;
+      justify-content: center;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &-image {
+        max-width: 88%;
+      }
+    }
   }
 
-  &-link {
-    margin: 10px;
-    border-radius: 12px;
-    overflow: hidden;
-    background-color: transparent;
-    display: flex;
-    max-width: 50px;
-    max-height: 50px;
-    justify-content: center;
-    transition: 0.3s ease-in-out;
-
-    &:hover {
-      transform: scale(1.1);
-    }
-
-    &_image {
-      max-width: 88%;
-    }
-  }
-
-  &-info {
+  &--info {
     padding-top: 35px;
     font-size: 15px;
     margin-bottom: -40px;

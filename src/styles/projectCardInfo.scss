@@ -1,9 +1,9 @@
 @use "/src/styles/variables.scss" as v;
 
-.projectCardInfo {
+.project-card-info {
   padding: 0 10px;
   font-size: 16px;
-  &-view {
+  &--view {
     position: relative;
     text-decoration: none;
     font-weight: initial;

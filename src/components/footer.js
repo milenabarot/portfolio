@@ -6,10 +6,10 @@ import MBLogo from "../images/logos/MBLogo.png";
 function Footer() {
   return (
     <div className="footer">
-      <a href="#top" className="footer-logo">
-        <img src={MBLogo} alt="MB Logo" className="footer-logo-MBLogo" />
+      <a href="#top" className="footer--logo">
+        <img src={MBLogo} alt="MB Logo" className="footer--logo-MBLogo" />
       </a>
-      <div className="footer-title">
+      <div className="footer--title">
         <a
           href="mailto:milenabarot@gmail.com"
           title="Email me"
@@ -20,31 +20,31 @@ function Footer() {
         </a>
       </div>
 
-      <div className="footer-links">
+      <div className="footer--links">
         <a
           href="https://www.linkedin.com/in/milena-barot-98282aa4/"
           target="_blank"
-          className="footer-link"
+          className="footer--links-link"
         >
           <img
             src={linkedinLogo}
             alt="My Linkedin profile"
-            className="footer-link_image"
+            className="footer--links-link-image"
           />
         </a>
         <a
           href="https://github.com/milenabarot"
-          className="footer-link"
+          className="footer--links-link"
           target="_blank"
         >
           <img
             src={githubLogo}
             alt="My Github profile"
-            className="footer-link_image"
+            className="footer--links-link-image"
           />
         </a>
       </div>
-      <p className="footer-info">Designed and created by Milena Barot</p>
+      <p className="footer--info">Designed and created by Milena Barot</p>
     </div>
   );
 }

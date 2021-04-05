@@ -16,7 +16,7 @@ function Projects() {
       id: 0,
       title: "Portfolio Website",
       moreInfo:
-        "React, Sass, Node.js, Express, ESLint, Framer Motion, Axios, Responsive Design, React Hooks",
+        "React, Sass (BEM), Node.js, Express, ESLint, Framer Motion, Axios, Responsive Design, React Hooks",
       imgScr: sign,
       link: "https://github.com/milenabarot/portfolio",
       selected: false,
@@ -84,9 +84,9 @@ function Projects() {
 
   return (
     <div className="projects" id="projects">
-      <h2 className="projects-mainTitle">Projects</h2>
+      <h2 className="projects--main-title">Projects</h2>
       <AnimateSharedLayout type="crossfade">
-        <ul className="projects-list">
+        <ul className="projects--list">
           {projects.map((project) => {
             return (
               <ProjectCard

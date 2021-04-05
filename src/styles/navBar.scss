@@ -7,7 +7,7 @@
   z-index: 999;
   pointer-events: none;
 
-  &-title {
+  &--title {
     margin: 20px;
     pointer-events: auto;
     font-size: 25px;
@@ -20,7 +20,7 @@
       margin: 20px 0px 20px -35px;
     }
   }
-  &-progressBar {
+  &--progress-bar {
     position: fixed;
     background-color: v.$dark-gray;
     height: 5px;
@@ -28,7 +28,7 @@
     z-index: 999;
   }
 
-  &-wrapListAndButton {
+  &--wrap-list-and-button {
     display: flex;
     margin-left: auto;
     align-items: center;
@@ -38,7 +38,7 @@
     }
   }
 
-  &-menuItems {
+  &--menu-items {
     display: flex;
     list-style: none;
     pointer-events: auto;
@@ -54,7 +54,7 @@
     }
   }
 
-  &-menuItem {
+  &--menu-item {
     margin-left: 17px;
     position: relative;
     text-decoration: none;
@@ -82,7 +82,7 @@
     }
   }
 
-  &-hamburgerButton {
+  &--hamburger-button {
     background-color: transparent;
     border: none;
     outline: none;
@@ -93,7 +93,7 @@
     display: flex;
     align-items: center;
 
-    &Slash {
+    &-slash {
       width: 21px;
       background-color: black;
       height: 3px;
@@ -104,7 +104,7 @@
         height: 2px;
       }
     }
-    &Tag {
+    &-tag {
       font-size: 29px;
       font-weight: 300;
       margin: 0;

@@ -1,6 +1,6 @@
 @use "/src/styles/variables.scss" as v;
 
-.projectCard {
+.project-card {
   flex-basis: 25%;
   background-color: white;
   padding: 10px 10px 30px 10px;
@@ -18,7 +18,7 @@
     transform: scale(1.08);
   }
 
-  &_isSelected {
+  &_is-selected {
     transform: scale(1.08);
     min-width: 350px;
 
@@ -36,20 +36,20 @@
     }
   }
 
-  &_isImageContained {
+  &_is-image-contained {
     .projectCard-image {
       background-size: contain;
     }
   }
 
-  &-image {
+  &--image {
     background-position: center;
     background-repeat: no-repeat;
     min-height: 270px;
     background-size: cover;
     transition: 500ms ease-in-out;
   }
-  &-title {
+  &--title {
     font-size: 19px;
     font-weight: bold;
     padding-left: 10px;

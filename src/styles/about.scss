@@ -6,11 +6,11 @@
   flex-direction: column;
   align-items: center;
 
-  &-title {
+  &--title {
     @include v.title-underline;
   }
 
-  &-image {
+  &--image {
     padding: 50px;
 
     & img {
@@ -18,18 +18,18 @@
       border-radius: 7px;
     }
   }
-  &-info {
+  &--info {
     max-width: 950px;
     font-size: 22px;
     padding: 0 40px;
   }
-  &-wordArray {
+  &--word-array {
     display: flex;
     justify-content: center;
     margin-top: 65px;
     width: 100%;
     padding-left: 130px;
-    &Animation {
+    &-animation {
       display: flex;
       align-items: center;
       overflow: hidden;
@@ -40,12 +40,12 @@
       font-weight: 400;
       padding-top: 60px;
 
-      &Words {
+      &-words {
         padding-left: 10px;
       }
     }
   }
-  &-logos {
+  &--logos {
     list-style: none;
     display: flex;
     flex-direction: row;

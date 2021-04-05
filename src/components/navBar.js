@@ -64,7 +64,7 @@ function NavBar() {
     <>
       <div
         style={{ width: `${scrollPosition}%` }}
-        className="navBar-progressBar"
+        className="navBar--progress-bar"
       ></div>
       <nav className="navBar">
         <AnimatePresence exitBeforeEnter>
@@ -75,14 +75,14 @@ function NavBar() {
               exit={{ opacity: 0, x: "-30%" }}
               transition={{ duration: 0.8 }}
               key={"navbar-title"}
-              className="navBar-title"
+              className="navBar--title"
               href="#top"
             >
               Milena Barot
             </motion.a>
           )}
         </AnimatePresence>
-        <div className="navBar-wrapListAndButton">
+        <div className="navBar--wrap-list-and-button">
           <AnimatePresence>
             {isNavBarOpen ? (
               <motion.ul
@@ -90,12 +90,12 @@ function NavBar() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 150 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                key="navBar-menuItems"
-                className="navBar-menuItems"
+                key="navBar--menu-items"
+                className="navBar--menu-items"
               >
                 {menuItems.map((menuItem) => {
                   return (
-                    <li className="navBar-menuItem" key={`${menuItem}`}>
+                    <li className="navBar--menu-item" key={`${menuItem}`}>
                       <a href={`#${menuItem}`}>{menuItem}</a>
                     </li>
                   );
@@ -104,9 +104,9 @@ function NavBar() {
             ) : null}
           </AnimatePresence>
 
-          <button className="navBar-hamburgerButton" onClick={toggleNavBar}>
+          <button className="navBar--hamburger-button" onClick={toggleNavBar}>
             <AnimateSharedLayout>
-              <motion.p layout className="navBar-hamburgerButtonTag">
+              <motion.p layout className="navBar--hamburger-button-tag">
                 &lt;
               </motion.p>
               <AnimatePresence>
@@ -116,12 +116,12 @@ function NavBar() {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="navBar-hamburgerButtonSlash"
+                    className="navBar--hamburger-button-slash"
                   ></motion.div>
                 )}
               </AnimatePresence>
 
-              <motion.p layout className="navBar-hamburgerButtonTag">
+              <motion.p layout className="navBar--hamburger-button-tag">
                 &gt;
               </motion.p>
             </AnimateSharedLayout>

@@ -44,11 +44,11 @@ function About() {
         variants={variants}
         transition={{ duration: 1, delay: 0.3 }}
       >
-        <h2 className="about-title">About</h2>
-        <div className="about-image">
+        <h2 className="about--title">About</h2>
+        <div className="about--image">
           <img src={bioPic} alt="My profile picture" />
         </div>
-        <div className="about-info">
+        <div className="about--info">
           <p>
             I'm a self taught frontend developer, with an Economics background
             and experience in commerce and data analysis. I work with React,
@@ -70,22 +70,22 @@ function About() {
             projects.
           </p>
         </div>
-        <div className="about-wordArray">
-          <div className="about-wordArrayAnimation">
+        <div className="about--word-array">
+          <div className="about--word-array-animation">
             I . . .
             <Typical
               wrapper="p"
               steps={steps}
               loop={Infinity}
-              className="about-wordArrayAnimationWords"
+              className="about--word-array-animation-words"
             />
           </div>
         </div>
-        <ul className="about-logos">
+        <ul className="about--logos">
           {logoArray.map((logo) => {
             return (
               <li
-                className="about-logos-image"
+                className="about--logos-image"
                 style={{ backgroundImage: `url(${logo})` }}
                 alt={logo}
               ></li>

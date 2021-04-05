@@ -2,13 +2,13 @@ import "../styles/projectCardInfo.scss";
 
 function ProjectCardInfo(props) {
   return (
-    <div className="projectCardInfo">
-      <p className="projectCardInfo-details">{props.moreInfo}</p>
+    <div className="project-card-info">
+      <p className="project-card-info--details">{props.moreInfo}</p>
       <a
         href={props.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="projectCardInfo-view"
+        className="project-card-info--view"
       >
         View on github
       </a>

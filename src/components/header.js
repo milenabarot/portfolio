@@ -6,8 +6,8 @@ import "../styles/header.scss";
 function Header() {
   return (
     <div className="header" id="header">
-      <div className="header-intro">
-        <h1 id="headerTitle" className="header-intro-title">
+      <div className="header--intro">
+        <h1 id="headerTitle" className="header--intro-title">
           Milena Barot
         </h1>
         <AnimatePresence>
@@ -15,10 +15,10 @@ function Header() {
             initial={{ opacity: 0, x: -450 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
-            className="header-intro-body"
+            className="header--intro-body"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu
-            augue purus. Aenean et semper lorem, sit amet dictum lectus.
+            Hello, I'm Milena. A Frontend Developer who loves to learn new
+            technologies and create cool projects.
           </motion.p>
         </AnimatePresence>
       </div>

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "../styles/contact.scss";
 import { motion } from "framer-motion";
 import useComponentVisibility from "../hooks/useComponentVisibility";
@@ -76,8 +76,8 @@ function Contact() {
         variants={variants}
         transition={{ duration: 1, delay: 0.3 }}
       >
-        <h2 className="contact-title">Contact</h2>
-        <form onSubmit={handleSubmit} className="contact-form">
+        <h2 className="contact--title">Contact</h2>
+        <form onSubmit={handleSubmit} className="contact--form">
           <label htmlFor="name"></label>
           <input
             type="text"
@@ -100,7 +100,7 @@ function Contact() {
           ></input>
           <label htmlFor="message"></label>
           <textarea
-            className="contact-form-textArea"
+            className="contact--form-text-area"
             type="text"
             rows="3"
             id="message"
@@ -112,7 +112,7 @@ function Contact() {
             required
           ></textarea>
           <button
-            className="contact-form-button"
+            className="contact--form-button"
             type="submit"
             disabled={contactForm.disabled}
           >
@@ -120,10 +120,10 @@ function Contact() {
           </button>
 
           {contactForm.emailSent === true && (
-            <p className="contact-form-successMessage">Email sent!</p>
+            <p className="contact--form-success-message">Email sent!</p>
           )}
           {contactForm.emailSent === false && (
-            <p className="contact-form-errorMessage">Email not sent!</p>
+            <p className="contact--form-error-message">Email not sent!</p>
           )}
         </form>
       </motion.div>
