@@ -32,7 +32,13 @@ function About() {
     hide: { opacity: 0, y: "80%" },
   };
 
-  const logoArray = [reactLogo, JSLogo, HTML5Logo, sassLogo, gitLogo];
+  const logoArray = [
+    { url: reactLogo, alt: "React logo" },
+    { url: JSLogo, alt: "JS Logo" },
+    { url: HTML5Logo, alt: "HTML5 Logo" },
+    { url: sassLogo, alt: "Sass Logo" },
+    { url: gitLogo, alt: "Git Logo" },
+  ];
 
   return (
     <>
@@ -46,7 +52,7 @@ function About() {
       >
         <h2 className="about--title">About</h2>
         <div className="about--image">
-          <img src={bioPic} alt="My profile picture" />
+          <img src={bioPic} alt="Picture of Milena Barot" />
         </div>
         <div className="about--info">
           <p>
@@ -72,7 +78,7 @@ function About() {
         </div>
         <div className="about--word-array">
           <div className="about--word-array-animation">
-            I . . .
+            <p>I . . .</p>
             <Typical
               wrapper="p"
               steps={steps}
@@ -86,8 +92,9 @@ function About() {
             return (
               <li
                 className="about--logos-image"
-                style={{ backgroundImage: `url(${logo})` }}
-                alt={logo}
+                style={{ backgroundImage: `url(${logo.url})` }}
+                role="img"
+                aria-label={logo.alt}
               ></li>
             );
           })}

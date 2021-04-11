@@ -16,7 +16,7 @@ function Projects() {
       id: 0,
       title: "Portfolio Website",
       moreInfo:
-        "React, Sass (BEM), Node.js, Express, ESLint, Framer Motion, Axios, Responsive Design, React Hooks",
+        "React, Sass (BEM), Node.js, Express, ESLint, Framer Motion, Axios, Responsive Design, React Hooks, WCAG 2.0",
       imgScr: sign,
       link: "https://github.com/milenabarot/portfolio",
       selected: false,

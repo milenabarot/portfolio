@@ -9,6 +9,7 @@ function ProjectCardInfo(props) {
         target="_blank"
         rel="noopener noreferrer"
         className="project-card-info--view"
+        tab-index="4"
       >
         View on github
       </a>

@@ -63,6 +63,11 @@ function NavBar() {
   return (
     <>
       <div
+        role="progressbar"
+        aria-valuenow={scrollPosition}
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuetext="Page vertical scroll progress "
         style={{ width: `${scrollPosition}%` }}
         className="navBar--progress-bar"
       ></div>
@@ -96,7 +101,9 @@ function NavBar() {
                 {menuItems.map((menuItem) => {
                   return (
                     <li className="navBar--menu-item" key={`${menuItem}`}>
-                      <a href={`#${menuItem}`}>{menuItem}</a>
+                      <a href={`#${menuItem}`} tabIndex="2">
+                        {menuItem}
+                      </a>
                     </li>
                   );
                 })}
@@ -104,7 +111,13 @@ function NavBar() {
             ) : null}
           </AnimatePresence>
 
-          <button className="navBar--hamburger-button" onClick={toggleNavBar}>
+          <button
+            className="navBar--hamburger-button"
+            onClick={toggleNavBar}
+            aria-expanded={isNavBarOpen}
+            aria-label="Main navigation menu"
+            tabIndex="1"
+          >
             <AnimateSharedLayout>
               <motion.p layout className="navBar--hamburger-button-tag">
                 &lt;
