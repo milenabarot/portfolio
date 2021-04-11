@@ -17,14 +17,22 @@ function ProjectCard(props) {
         type: "spring",
         ease: "easeInOut",
       }}
-      onClick={() => props.onClick(props.project.id)}
     >
       <div
         className="project-card--image"
         style={{ backgroundImage: `url(${props.project.imgScr})` }}
-        alt={props.project.imgScr}
+        onClick={() => props.onClick(props.project.id)}
+        aria-label={`Image of ${props.project.title}`}
+        role="img"
       />
-      <p className="project-card--title">{props.project.title}</p>
+      <button
+        className="project-card--title"
+        onClick={() => props.onClick(props.project.id)}
+        aria-expanded={props.project.selected}
+        type="button"
+      >
+        {props.project.title}
+      </button>
       {props.project.selected && (
         <ProjectCardInfo
           moreInfo={props.project.moreInfo}

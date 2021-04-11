@@ -52,10 +52,16 @@
   &--title {
     font-size: 19px;
     font-weight: bold;
-    padding-left: 10px;
+    padding: 10px 0px 0px 10px;
+    margin-top: 10px;
     position: relative;
     text-decoration: none;
     width: max-content;
+    background-color: transparent;
+    border: none;
+    font-family: v.$main-font-family;
+    cursor: pointer;
+
     &::after {
       background: none repeat scroll 0 0 transparent;
       bottom: -3px;

@@ -45,6 +45,7 @@
     font-size: 20px;
     font-weight: 400;
     margin-top: 24px;
+    z-index: 95;
 
     @media only screen and (max-width: 600px) {
       padding-left: 0;
@@ -92,6 +93,7 @@
     pointer-events: auto;
     display: flex;
     align-items: center;
+    z-index: 100;
 
     &-slash {
       width: 21px;

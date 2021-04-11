@@ -120,10 +120,14 @@ function Contact() {
           </button>
 
           {contactForm.emailSent === true && (
-            <p className="contact--form-success-message">Email sent!</p>
+            <p className="contact--form-success-message" role="alert">
+              Email sent!
+            </p>
           )}
           {contactForm.emailSent === false && (
-            <p className="contact--form-error-message">Email not sent!</p>
+            <p className="contact--form-error-message" role="alert">
+              Email not sent!
+            </p>
           )}
         </form>
       </motion.div>
