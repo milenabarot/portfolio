@@ -7,6 +7,7 @@ import Footer from "./components/footer";
 import NavBar from "./components/navBar";
 
 function App() {
+  document.title = "Milena Barot";
   return (
     <div className="app">
       <NavBar />

@@ -46,7 +46,7 @@ function Contact() {
     event.preventDefault();
 
     axios
-      .post("http://localhost:3030/api/email", contactForm)
+      .post("https://mbdev-portfolio-api.herokuapp.com/api/email", contactForm)
       .then((res) => {
         setContactForm({
           name: "",
