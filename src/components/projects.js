@@ -5,6 +5,9 @@ import dashboardImage from "../images/dashboardImage.PNG";
 import toDoListImage from "../images/toDoListImage.PNG";
 import toDoListReactImage from "../images/toDoListReactImage.PNG";
 import bakeryImage from "../images/bakeryImage.PNG";
+import reactSnakeImage from "../images/snakeGameImage.PNG";
+import recipeApiImage from "../images/recipeApiImage.PNG";
+import portfolioImage from "../images/portfolioImage.PNG";
 
 import { AnimateSharedLayout } from "framer-motion";
 import ProjectCard from "../components/projectCard";
@@ -16,8 +19,8 @@ function Projects() {
       id: 0,
       title: "Portfolio Website",
       moreInfo:
-        "React, Sass (BEM), Node.js, Express, ESLint, Framer Motion, Axios, Responsive Design, React Hooks, WCAG 2.0",
-      imgScr: sign,
+        "React, Sass (BEM), Node.js, Express, Framer Motion, Axios, Responsive Design, React Hooks, WCAG 2.0",
+      imgScr: portfolioImage,
       link: "https://github.com/milenabarot/portfolio",
       selected: false,
       contain: true,
@@ -36,8 +39,8 @@ function Projects() {
       id: 2,
       title: "Snake Game",
       moreInfo: "React, Canvas HTML 5",
-      imgScr: sign,
-      link: "https://github.com/milenabarot/to-do-list-react",
+      imgScr: reactSnakeImage,
+      link: "https://github.com/milenabarot/react-snake-game",
       selected: false,
       contain: true,
     },
@@ -59,10 +62,10 @@ function Projects() {
     },
     {
       id: 5,
-      title: "Bakery Website",
-      moreInfo: "HTML 5, CSS, Vanilla JS, Git",
-      imgScr: bakeryImage,
-      link: "https://github.com/milenabarot/Shop-website",
+      title: "Recipe REST API",
+      moreInfo: "REST API, Node.js, Express, MongoDB",
+      imgScr: recipeApiImage,
+      link: "https://github.com/milenabarot/recipe-API",
       selected: false,
     },
   ]);

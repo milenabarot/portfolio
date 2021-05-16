@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import "../styles/header.scss";

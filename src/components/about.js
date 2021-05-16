@@ -6,6 +6,7 @@ import JSLogo from "../images/logos/JSLogo.png";
 import HTML5Logo from "../images/logos/HTML5Logo.png";
 import sassLogo from "../images/logos/sassLogo.png";
 import gitLogo from "../images/logos/gitLogo.png";
+import nodejsLogo from "../images/logos/nodejslogo.png";
 
 import { motion } from "framer-motion";
 import useComponentVisibility from "../hooks/useComponentVisibility";
@@ -38,6 +39,7 @@ function About() {
     { url: HTML5Logo, alt: "HTML5 Logo" },
     { url: sassLogo, alt: "Sass Logo" },
     { url: gitLogo, alt: "Git Logo" },
+    { url: nodejsLogo, alt: "Nodejs Logo" },
   ];
 
   return (
