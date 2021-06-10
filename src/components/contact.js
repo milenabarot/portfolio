@@ -3,6 +3,8 @@ import { useState } from "react";
 import "../styles/contact.scss";
 import { motion } from "framer-motion";
 import useComponentVisibility from "../hooks/useComponentVisibility";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Contact() {
   const [contactForm, setContactForm] = useState({
@@ -48,6 +50,7 @@ function Contact() {
     axios
       .post("https://mbdev-portfolio-api.herokuapp.com/api/email", contactForm)
       .then((res) => {
+        toast("Email Sent");
         setContactForm({
           name: "",
           email: "",
@@ -57,6 +60,7 @@ function Contact() {
         });
       })
       .catch((err) => {
+        toast.error("Email not sent");
         setContactForm({ ...contactForm, disabled: false, emailSent: false });
       });
   };
@@ -118,8 +122,7 @@ function Contact() {
           >
             Send
           </button>
-
-          {contactForm.emailSent === true && (
+          {/* {contactForm.emailSent === true && (
             <p className="contact--form-success-message" role="alert">
               Email sent!
             </p>
@@ -127,8 +130,8 @@ function Contact() {
           {contactForm.emailSent === false && (
             <p className="contact--form-error-message" role="alert">
               Email not sent!
-            </p>
-          )}
+            </p> */}
+          {/* )} */}
         </form>
       </motion.div>
     </>

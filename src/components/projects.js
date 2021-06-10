@@ -4,7 +4,7 @@ import sign from "../images/sign.jpg";
 import dashboardImage from "../images/dashboardImage.PNG";
 import toDoListImage from "../images/toDoListImage.PNG";
 import toDoListReactImage from "../images/toDoListReactImage.PNG";
-import bakeryImage from "../images/bakeryImage.PNG";
+
 import reactSnakeImage from "../images/snakeGameImage.PNG";
 import recipeApiImage from "../images/recipeApiImage.PNG";
 import portfolioImage from "../images/portfolioImage.PNG";

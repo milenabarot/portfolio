@@ -5,6 +5,7 @@ import About from "./components/about";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
 import NavBar from "./components/navBar";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   document.title = "Milena Barot";
@@ -17,6 +18,7 @@ function App() {
         <About />
         <div className="contact-footer-wrap">
           <Contact />
+          <ToastContainer toastClassName="toast" />
           <Footer />
         </div>
       </div>
