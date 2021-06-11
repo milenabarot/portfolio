@@ -5,8 +5,10 @@ import { motion } from "framer-motion";
 import useComponentVisibility from "../hooks/useComponentVisibility";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Loader from "./loader";
 
 function Contact() {
+  const [isLoading, setLoading] = useState(false);
   const [contactForm, setContactForm] = useState({
     name: "",
     email: "",
@@ -44,13 +46,17 @@ function Contact() {
     });
   };
 
+  //loading
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    setLoading(true);
     axios
       .post("https://mbdev-portfolio-api.herokuapp.com/api/email", contactForm)
       .then((res) => {
         toast("Email Sent");
+        setLoading(false);
         setContactForm({
           name: "",
           email: "",
@@ -61,6 +67,7 @@ function Contact() {
       })
       .catch((err) => {
         toast.error("Email not sent");
+        setLoading(false);
         setContactForm({ ...contactForm, disabled: false, emailSent: false });
       });
   };
@@ -115,23 +122,16 @@ function Contact() {
             onChange={handleChange}
             required
           ></textarea>
-          <button
-            className="contact--form-button"
-            type="submit"
-            disabled={contactForm.disabled}
-          >
-            Send
-          </button>
-          {/* {contactForm.emailSent === true && (
-            <p className="contact--form-success-message" role="alert">
-              Email sent!
-            </p>
-          )}
-          {contactForm.emailSent === false && (
-            <p className="contact--form-error-message" role="alert">
-              Email not sent!
-            </p> */}
-          {/* )} */}
+          <div className="contact--form-button-wrap">
+            <button
+              className="contact--form-button"
+              type="submit"
+              disabled={contactForm.disabled}
+            >
+              Send
+            </button>
+            {isLoading ? <Loader /> : null}
+          </div>
         </form>
       </motion.div>
     </>

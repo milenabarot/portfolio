@@ -68,15 +68,6 @@
         cursor: not-allowed;
       }
     }
-    &-succes-message {
-      color: darkblue;
-      padding: 10px 0px;
-    }
-
-    &-error-message {
-      color: red;
-      padding: 10px 0px;
-    }
 
     @media screen and (max-width: 900px) and (min-width: 461px) {
       width: 45%;
