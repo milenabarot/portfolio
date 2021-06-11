@@ -17,6 +17,15 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <script>
+      const host = "www.mb-dev.co.uk" || "mb-dev.co.uk";
+      if (
+        window.location.host === host &&
+        window.location.protocol !== "https:"
+      ) {
+        window.location.protocol = "https";
+      }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
