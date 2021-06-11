@@ -87,9 +87,9 @@
   }
 }
 
-.Toastify__toast--success {
-  background: lightblue;
-}
-.Toastify__toast-container {
-  color: black;
+.toast-contact {
+  background: lightblue !important;
+  color: black !important;
+  font-size: 25px !important;
+  font-family: v.$main-font-family !important;
 }

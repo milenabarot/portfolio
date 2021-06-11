@@ -1,4 +1,6 @@
 import "./App.scss";
+import "./styles/contact.scss";
+
 import Header from "./components/header";
 import Projects from "./components/projects";
 import About from "./components/about";
@@ -18,7 +20,7 @@ function App() {
         <About />
         <div className="contact-footer-wrap">
           <Contact />
-          <ToastContainer toastClassName="toast" />
+          <ToastContainer toastClassName="toast-contact" />
           <Footer />
         </div>
       </div>
