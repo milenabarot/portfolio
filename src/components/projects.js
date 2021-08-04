@@ -1,12 +1,11 @@
 import { useState } from "react";
 
-import sign from "../images/sign.jpg";
 import dashboardImage from "../images/dashboardImage.PNG";
 import toDoListImage from "../images/toDoListImage.PNG";
 import toDoListReactImage from "../images/toDoListReactImage.PNG";
 
 import reactSnakeImage from "../images/snakeGameImage.PNG";
-import recipeApiImage from "../images/recipeApiImage.PNG";
+import recipeAppImage from "../images/recipeAppImage.PNG";
 import portfolioImage from "../images/portfolioImage.PNG";
 
 import { AnimateSharedLayout } from "framer-motion";
@@ -27,6 +26,14 @@ function Projects() {
     },
     {
       id: 1,
+      title: "Recipe APP with a REST API",
+      moreInfo: "MERN stack - REST API, Node.js, Express, MongoDB & React",
+      imgScr: recipeAppImage,
+      link: "https://github.com/milenabarot/recipe-API",
+      selected: false,
+    },
+    {
+      id: 2,
       title: "Dashboard",
       moreInfo:
         "React, Axios, Pexels API, OpenWeather API, Framer Motion, Responsive Design, React Classes & Hooks, Local Storage",
@@ -36,7 +43,7 @@ function Projects() {
       contain: true,
     },
     {
-      id: 2,
+      id: 3,
       title: "Snake Game",
       moreInfo: "React, Canvas HTML 5",
       imgScr: reactSnakeImage,
@@ -45,7 +52,7 @@ function Projects() {
       contain: true,
     },
     {
-      id: 3,
+      id: 4,
       title: "To Do List with React",
       moreInfo: "React, CSS, Local Storage",
       imgScr: toDoListReactImage,
@@ -53,19 +60,11 @@ function Projects() {
       selected: false,
     },
     {
-      id: 4,
+      id: 5,
       title: "To Do List with Vanilla JS",
       moreInfo: "Vanilla JS, HTML 5, CSS, Local Storage",
       imgScr: toDoListImage,
       link: "https://github.com/milenabarot/To-Do-List",
-      selected: false,
-    },
-    {
-      id: 5,
-      title: "Recipe REST API",
-      moreInfo: "REST API, Node.js, Express, MongoDB",
-      imgScr: recipeApiImage,
-      link: "https://github.com/milenabarot/recipe-API",
       selected: false,
     },
   ]);
