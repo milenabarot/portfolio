@@ -7,7 +7,7 @@ function Header() {
     <div className="header" id="header">
       <div className="header--intro">
         <h1 id="headerTitle" className="header--intro-title">
-          Milena Barot
+          Milena
         </h1>
         <AnimatePresence>
           <motion.p
