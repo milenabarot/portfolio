@@ -26,7 +26,7 @@ function Projects() {
     },
     {
       id: 1,
-      title: "Recipe APP with a REST API",
+      title: "Recipe App",
       moreInfo: "MERN stack - REST API, Node.js, Express, MongoDB & React",
       imgScr: recipeAppImage,
       link: "https://github.com/milenabarot/recipe-API",
