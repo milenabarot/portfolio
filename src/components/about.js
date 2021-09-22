@@ -53,9 +53,9 @@ function About() {
         transition={{ duration: 1, delay: 0.3 }}
       >
         <h2 className="about--title">About</h2>
-        <div className="about--image">
+        {/* <div className="about--image">
           <img src={bioPic} alt="Picture of Milena Barot" />
-        </div>
+        </div> */}
         <div className="about--info">
           <p>
             I'm a self taught frontend developer, with an Economics background
