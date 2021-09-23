@@ -3,6 +3,11 @@
 .project-card-info {
   padding: 0 10px;
   font-size: 16px;
+  &--wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
   &--view {
     position: relative;
     text-decoration: none;

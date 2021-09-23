@@ -37,6 +37,7 @@ function ProjectCard(props) {
         <ProjectCardInfo
           moreInfo={props.project.moreInfo}
           link={props.project.link}
+          liveLink={props.project.liveLink}
         />
       )}
     </motion.li>

@@ -30,6 +30,7 @@ function Projects() {
       moreInfo: "MERN stack - REST API, Node.js, Express, MongoDB & React",
       imgScr: recipeAppImage,
       link: "https://github.com/milenabarot/recipe-API",
+      liveLink: "https://mel-recipe-app.herokuapp.com/",
       selected: false,
     },
     {

@@ -58,9 +58,8 @@ function About() {
         </div> */}
         <div className="about--info">
           <p>
-            I'm a self taught frontend developer, with an Economics background
-            and experience in commerce and data analysis. I work with React,
-            Sass, Axios & Node in my projects and I value responsive design, web
+            I'm a self taught frontend developer. I work with React, Sass, Axios
+            & Node in my projects and I value responsive design, web
             accessibility and clean UI.
           </p>
           <p>
@@ -70,12 +69,8 @@ function About() {
           <p>
             My background has taught me the importance of organisation, and I
             use Github and Git to effectively organise my projects and manage my
-            app version control.
-          </p>
-          <p>
-            Advancing my coding skills is something I'm very passionate about.
-            I'm looking for a position in the industry to work on some amazing
-            projects.
+            app version control. Advancing my coding skills is something I'm
+            very passionate about.
           </p>
         </div>
         <div className="about--word-array">
