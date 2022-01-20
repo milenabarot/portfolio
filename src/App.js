@@ -10,7 +10,7 @@ import NavBar from "./components/navBar";
 import { ToastContainer } from "react-toastify";
 
 function App() {
-  document.title = "Milena";
+  document.title = "Milena Barot";
   return (
     <div className="app">
       <NavBar />
